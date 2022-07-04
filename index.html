@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Brick breaker</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Site pour Projet web">
+        <meta name="keywords" content="Onra2,ESI,TD,AUTD">
+        <meta name="author" content="Arno Pion 54024">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Css\main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="Js/Constants.js"></script>
+        <script src="Js/model/Dimension.js"></script>
+        <script src="Js/model/Sprite.js"></script>
+        <script src="Js/model/Brick.js"></script>
+        <script src="Js/model/Position.js"></script>
+        <script src="Js/model/Movement.js"></script>
+        <script src="Js/model/Ball.js"></script>
+        <script src="Js/model/Paddle.js"></script>
+        <script src="Js/model/Player.js"></script>
+        <script src="Js/model/Game.js"></script>
+        <script src="Js/ctrl/PaddleCtrl.js"></script>
+        <script src="Js/ctrl/BallCtrl.js"></script>
+        <script src="Js/ctrl/GameCtrl.js"></script>
+        <script src="Js/view/View.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="Title">Brick breaker!</h1>
+            <h2>Onra2</h2>
+        </header>
+        <br>
+        <main>
+            <div class="Player">
+                <p class="Left">Lives: 
+                    <span id="lives">
+                        <img class="heart" src="Css/heart.png" alt="0" width="16" height="16">
+                    </span>
+                </p>
+                <p class="Middle">Level: <span id="level">1</span></p>
+                <p class="Right">Score: <span id="score">0</span></p>
+            </div>
+            <div class="GameBoard" id="Board">
+                <p id="StartText">Click to start</p>
+            </div>
+        </main>
+    </body>
+    <script>
+        let game = new Game();
+        let view = new View();
+        let gameCtrl = new GameCtrl(game,view);
+        gameCtrl.play();
+    </script>
+</html>

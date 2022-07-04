@@ -1,0 +1,106 @@
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header"
+                         "game"
+                         "footer";
+    font-family: "Arial", Verdana, sans-serif;
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+    background-color: rgb(37, 106, 185);
+    color: white;
+    padding: 2ex;
+}
+
+.Title{
+    font-family: 'vascon', Fallback, sans-serif;
+    font-size: 3em;
+}
+
+main{
+    grid-area: game;
+    height: 80%;
+    padding: 2ex;
+}
+
+.GameBoard{
+    border-style: solid;
+    border-color: rgb(37, 106, 185);
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.Raket{
+    display: inline-block;
+    font-size: 0px;
+    background-color: rgb(85, 149, 222); 
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+}
+
+.Balle{
+    border-radius: 25px;
+    display: inline-block;
+    font-size: 0px;
+    background-color: rgb(85, 149, 222);
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Brick{
+    display: inline-block;
+    font-size: 0px;
+    background-color: rgb(84, 148, 221); 
+    border: 1px solid rgb(36, 105, 184);
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#StartText{
+    margin:auto;
+    color: rgb(37, 106, 185);
+    font-size: 2em;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.Player{
+    border-style: solid;
+    border-color: rgb(37, 106, 185);
+    margin: auto;
+    height: 25px; 
+}
+
+.Left {
+    position: absolute;
+    float: left;
+    margin: 1mm;
+}
+
+.Middle {
+    position: absolute;
+    float: center;
+    margin: 1mm;
+    left: 48%;
+}
+
+.Right {
+    float: right;
+    margin: 1mm;
+}
+
+@font-face {
+    font-family: 'vascon';
+    src: url('vascon.ttf')  format('truetype')
+}
